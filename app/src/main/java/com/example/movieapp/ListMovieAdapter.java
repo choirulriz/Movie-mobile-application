@@ -1,31 +1,19 @@
 package com.example.movieapp;
-
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
-
 import java.util.ArrayList;
 
 public class ListMovieAdapter extends RecyclerView.Adapter<ListMovieAdapter.CategoryViewHolder>{
     private ArrayList<MovieModel> listMovies;
-    private OnItemClickCallback onItemClickCallback;
 
-    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback){
-        this.onItemClickCallback = onItemClickCallback;
-    }
-
-    public interface OnItemClickCallback{
-        void onItemClicked(MovieModel data);
-    }
 
 
     public ListMovieAdapter(ArrayList<MovieModel> listMovies){

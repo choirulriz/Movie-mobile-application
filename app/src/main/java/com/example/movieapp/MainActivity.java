@@ -8,7 +8,6 @@ import android.os.Bundle;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     private RecyclerView rvListMovie;
@@ -25,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         rvListMovie = findViewById(R.id.rv_movie_list);
         rvListMovie.setHasFixedSize(true);
 
-        list.addAll(MovieData.getListData());
+        list.addAll(MovieData.getListDataMovie());
         showRecyclerList();
     }
 

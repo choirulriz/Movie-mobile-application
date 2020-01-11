@@ -42,7 +42,7 @@ public class DetailMovie extends AppCompatActivity {
         detailDirector.setText(movie.getDirector());
         detailGenre.setText(movie.getGenre());
         detailDuration.setText(movie.getDuration());
-        detailSynopsis.setText(movie.getDetail());
+        detailSynopsis.setText(movie.getOverview());
 
         bookNow.setOnClickListener(new View.OnClickListener() {
             @Override
