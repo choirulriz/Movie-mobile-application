@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailMovie">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/img_detail_poster"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="481dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/poster_a_star" />
+
+        <TextView
+            android:id="@+id/txt_detail_genres"
+            style="@style/TextItem.primariDark"
+            android:text="@string/genres_of_movies"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_detail_poster"
+            app:layout_constraintVertical_bias="0.041" />
+
+        <TextView
+            android:id="@+id/txt_detail_title"
+            style="@style/TextItem.title"
+            android:text="@string/title_of_movie"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/txt_detail_genres"
+            app:layout_constraintVertical_bias="0.064" />
+
+
+        <TextView
+            android:id="@+id/release"
+            style="@style/TextItem"
+            android:textStyle="bold"
+            android:text="@string/release_date"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_title"
+            app:layout_constraintVertical_bias="0.05" />
+
+
+        <TextView
+            android:id="@+id/txt_detail_release"
+            style="@style/TextItem.primariDark"
+            android:text="@string/mm_dd_yyyy"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.11"
+            app:layout_constraintStart_toEndOf="@+id/release"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_title"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/score"
+            style="@style/TextItem"
+            android:text="@string/user_score"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/release"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/txt_detail_score"
+            style="@style/TextItem.primariDark"
+            android:text="@string/_100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.02"
+            app:layout_constraintStart_toEndOf="@+id/score"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_release"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/runtime"
+            style="@style/TextItem"
+            android:text="@string/runtime"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/score"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/txt_detail_runtime"
+            style="@style/TextItem.primariDark"
+            android:text="@string/hh_mm"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintStart_toEndOf="@+id/runtime"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_score"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/director"
+            style="@style/TextItem"
+            android:text="@string/director"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/runtime"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/txt_detail_director"
+            style="@style/TextItem.primariDark"
+            android:text="who the director?"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.12"
+            app:layout_constraintStart_toEndOf="@+id/director"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_runtime"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/Actors"
+            style="@style/TextItem"
+            android:textStyle="bold"
+            android:text="Actors"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/director"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/txt_detail_actors"
+            style="@style/TextItem.primariDark"
+            android:text="@string/name_of_actors"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.15"
+            app:layout_constraintStart_toEndOf="@+id/Actors"
+            app:layout_constraintTop_toBottomOf="@+id/txt_detail_director"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/Synopsis"
+            style="@style/TextItem"
+            android:textStyle="bold"
+            android:text="@string/synopsis"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Actors"
+            app:layout_constraintVertical_bias="0.05" />
+
+        <TextView
+            android:id="@+id/txt_detail_synopsis"
+            style="@style/TextItem.primariDark"
+            android:text="@string/lorem"
+            android:paddingLeft="25dp"
+            android:paddingRight="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Synopsis"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="26dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.31" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
